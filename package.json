@@ -1,0 +1,27 @@
+{
+  "name": "git-purge-deleted",
+  "version": "1.0.0",
+  "description": "Terminal command which helps delete local git branches which no longer exist on the server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikatun/git-purge-deleted.git"
+  },
+  "keywords": [
+    "git",
+    "purge",
+    "deleted",
+    "remote",
+    "git",
+    "remote"
+  ],
+  "author": "Ivo Katunaric",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikatun/git-purge-deleted/issues"
+  },
+  "homepage": "https://github.com/ikatun/git-purge-deleted#readme"
+}
