@@ -67,9 +67,6 @@ async function main() {
   const localBranches = await getLocalBranches();
   const remoteBranches = await getRemoteBranches();
 
-  console.log('localBranches', localBranches);
-  console.log('remoteBranches', remoteBranches);
-
   const deletionCandidates = getDeletionCandidates(localBranches, remoteBranches);
 
   if (deletionCandidates.length === 0) {
