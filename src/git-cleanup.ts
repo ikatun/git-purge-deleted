@@ -67,6 +67,10 @@ async function main() {
 
   const deletionCandidates = getDeletionCandidates(localBranches, remoteBranches);
 
+  if (deletionCandidates.length === 0) {
+    console.log('All local branches here exist on remote too. No deletion candidates.');
+  }
+
   for (const deletionCandidate of deletionCandidates) {
     const confirmed = await offerDeletion(deletionCandidate);
     if (confirmed) {

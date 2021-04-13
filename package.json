@@ -2,12 +2,15 @@
   "name": "git-purge-deleted",
   "version": "1.0.0",
   "description": "Terminal command which helps delete local git branches which no longer exist on the server",
-  "main": "index.js",
+  "main": "build",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf build && tsc",
     "start": "tsc-watch --onSuccess 'node build'",
-    "lint": "eslint '*/**/*.{js,ts,tsx}'"
+    "lint": "eslint '*/**/*.{js,ts,tsx}'",
+  },
+  "bin": {
+    "git-purge-deleted": "./build"
   },
   "repository": {
     "type": "git",
@@ -43,6 +46,7 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
+    "inquirer": "^8.0.0",
     "source-map-support": "^0.5.19"
   },
   "husky": {
