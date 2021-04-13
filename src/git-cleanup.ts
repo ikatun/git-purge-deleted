@@ -35,7 +35,9 @@ async function getRemoteBranches() {
 }
 
 function getDeletionCandidates(localBranches: string[], remoteBranches: string[]) {
-  return localBranches.filter((b) => !remoteBranches.includes(b));
+  return localBranches.filter(
+    (local) => !remoteBranches.includes(local) && !remoteBranches.includes(`origin/${local}`),
+  );
 }
 
 async function deleteBranch(branchName: string) {
@@ -64,6 +66,9 @@ async function main() {
   await execAsync('git remote prune origin');
   const localBranches = await getLocalBranches();
   const remoteBranches = await getRemoteBranches();
+
+  console.log('localBranches', localBranches);
+  console.log('remoteBranches', remoteBranches);
 
   const deletionCandidates = getDeletionCandidates(localBranches, remoteBranches);
 
