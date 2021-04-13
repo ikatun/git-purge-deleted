@@ -1,6 +1,6 @@
 {
   "name": "git-purge-deleted",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Terminal command which helps delete local git branches which no longer exist on the server",
   "main": "build",
   "scripts": {
@@ -41,13 +41,13 @@
     "husky": "^5.1.3",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
-    "reflect-metadata": "^0.1.13",
     "tsc-watch": "^4.2.9",
     "typescript": "^4.2.3"
   },
   "dependencies": {
     "inquirer": "^8.0.0",
-    "source-map-support": "^0.5.19"
+    "source-map-support": "^0.5.19",
+    "reflect-metadata": "^0.1.13"
   },
   "husky": {
     "hooks": {
