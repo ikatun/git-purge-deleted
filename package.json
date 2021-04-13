@@ -1,6 +1,6 @@
 {
   "name": "git-purge-deleted",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Terminal command which helps delete local git branches which no longer exist on the server",
   "main": "build",
   "scripts": {
